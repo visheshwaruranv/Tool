@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Direct PDF - Your ultimate PDF solution. Merge, split, compress, and convert PDFs effortlessly.">
+    <meta name="keywords" content="PDF, merge PDF, split PDF, compress PDF, convert PDF, Direct PDF">
+    <meta name="author" content="Direct PDF Team">
+    <title>Direct PDF - Your Ultimate PDF Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-login {
+            background: #fff;
+            color: #007BFF;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #f4f4f4;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons .btn-primary {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .cta-buttons .btn-secondary {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Tools Section */
+        .tools {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .tools h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-card {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .tool-card i {
+            font-size: 40px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .tool-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .tool-card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .btn-tool {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            text-align: center;
+            background: #fff;
+        }
+
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .tool-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Direct PDF</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#login" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Your Ultimate PDF Solution</h2>
+            <p>Merge, split, compress, and convert PDFs effortlessly.</p>
+            <div class="cta-buttons">
+                <a href="#tools" class="btn-primary">Get Started</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2>Our PDF Tools</h2>
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Merge PDF</h3>
+                    <p>Combine multiple PDFs into one.</p>
+                    <a href="#merge-pdf" class="btn-tool">Try Now</a>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Split PDF</h3>
+                    <p>Split a PDF into multiple files.</p>
+                    <a href="#split-pdf" class="btn-tool">Try Now</a>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-compress"></i>
+                    <h3>Compress PDF</h3>
+                    <p>Reduce the size of your PDF.</p>
+                    <a href="#compress-pdf" class="btn-tool">Try Now</a>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Convert PDF</h3>
+                    <p>Convert PDFs to other formats.</p>
+                    <a href="#convert-pdf" class="btn-tool">Try Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Direct PDF</h2>
+            <p>Direct PDF is a free, easy-to-use online PDF tool that helps you manage your PDF files effortlessly. Our mission is to provide a seamless experience for all your PDF needs.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#faq">FAQs</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2023 Direct PDF. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
